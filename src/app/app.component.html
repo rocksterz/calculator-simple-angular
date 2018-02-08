@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator</title>
+
+
+</head>
+<body>
+
+<div style="margin: 50px">
+  <div class="col-xs-12 col-sm-8">
+    <div class="form-horizontal">
+
+      <div class="form-group">
+        <label class="col-xs-2 control-label">Value 1</label>
+          <div class="col-xs-10">
+            <input type="text" class="form-control" name="" id="" placeholder="Insert Value" [(ngModel)]="value1">
+          </div>
+      </div>
+
+      <div class="form-group">
+          <label class="col-xs-2 control-label">Value 2</label>
+            <div class="col-xs-10">
+              <input type="text" class="form-control" name="" id="" placeholder="Insert Value" [(ngModel)]="value2">
+            </div>
+      </div>
+
+      <div class="form-group">
+          <div class="col-xs-2 control-label"></div>
+            <div class="col-xs-10">
+              <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default" (click)="calculate('+')">+</button>
+                <button type="button" class="btn btn-default" (click)="calculate('-')">-</button>
+                <button type="button" class="btn btn-default" (click)="calculate('x')">x</button>
+                <button type="button" class="btn btn-default" (click)="calculate('/')">/</button>
+                <button type="button" class="btn btn-default" (click)="calculate('^')">^</button>
+                <button type="button" class="btn btn-default" (click)="calculate('v')">v</button>
+                <button type="button" class="btn btn-default" (click)="calculate('%')">%</button>
+              </div>
+            </div>
+      </div>
+
+      <div class="form-group">
+          <label class="col-xs-2 control-label">Result</label>
+            <div class="col-xs-10">
+              <input type="text" class="form-control" name="" id="" placeholder="{{ result }}">
+            </div>
+      </div>
+        
+    </div>     
+  </div>
+
+  <div class="col-xs-12 col-sm-4">
+      <ul class="list-group">
+          <li class="list-group-item" *ngFor="let h of history">{{ h }}</li>
+      </ul>  
+  </div>
+</div>
+  
+</body>
+</html>
